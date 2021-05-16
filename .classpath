@@ -30,5 +30,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="W:/Workspace-Eclipse/_EXTERNAL_JARS/HeadDB-2.2.jar"/>
 	<classpathentry kind="lib" path="W:/Workspace-Eclipse/_EXTERNAL_JARS/Vault.jar"/>
+	<classpathentry kind="lib" path="W:/Workspace-Eclipse/_EXTERNAL_JARS/EssentialsX-2.18.2.0.jar"/>
+	<classpathentry kind="lib" path="W:/Workspace-Eclipse/_EXTERNAL_JARS/EssentialsXProtect-2.18.2.0.jar"/>
+	<classpathentry kind="lib" path="W:/Workspace-Eclipse/_EXTERNAL_JARS/EssentialsXSpawn-2.18.2.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
