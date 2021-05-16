@@ -1,13 +1,13 @@
-money: '512000.0'
+money: '199'
 logoutlocation:
   world: world
-  x: -30.93588393603015
+  x: -31.980014849733607
   y: 64.0
-  z: 47.07974262445184
-  yaw: -272.2505
-  pitch: 32.099945
+  z: 50.667645567336386
+  yaw: -100.94995
+  pitch: 25.64993
 timestamps:
-  logout: 1621188539484
-  login: 1621188543342
+  logout: 1621192890159
+  login: 1621192173077
 lastAccountName: VormirAssassin
 ipAddress: 127.0.0.1
