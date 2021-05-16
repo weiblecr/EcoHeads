@@ -14,6 +14,6 @@ public class EcoHeadsPlugin extends JavaPlugin {
 
         // Commands enabled with following method must have entries in plugin.yml
     	getLogger().info("Enabling The EcoHeads Plugin");
-        getCommand("example").setExecutor(new ExampleCommand(this));
+        getCommand("headdb").setExecutor(new EcoHeadsCommand(this));
     }
 }
