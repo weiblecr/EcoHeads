@@ -19,7 +19,7 @@ public class ExampleCommand implements CommandExecutor {
             return false;
         }
 
-        sender.sendMessage("Successfully used example command!");
+        sender.sendMessage("Successfully used example acommand!");
 
         return true;
     }

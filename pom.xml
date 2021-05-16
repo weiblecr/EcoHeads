@@ -8,14 +8,14 @@
 
     <!-- Plugin Information -->
     <!-- Name, Description, and URL are used in plugin.yml -->
-    <name>SpigotPlugin</name>
-    <description>Example of a Spigot plugin using Maven</description>
-    <url>http://cardcraft.ddns.net</url>
+    <name>EcoHeads</name>
+    <description>EcoHeads Plugin</description>
+    <url>https://gitlab.cardcraft.inc/minecraftplugins/eco-heads</url>
 
     <properties>
         <!--  Author and MainClass are used in plugin.yml -->
         <author>CWeible</author>
-        <mainClass>plugins.cardcraft.inc.spigotplugin.EcoHeadsPlugin</mainClass>
+        <mainClass>plugins.cardcraft.inc.ecoheads.EcoHeadsPlugin</mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

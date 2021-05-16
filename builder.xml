@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!-- Configuration of the Ant build system to generate a Jar file -->
-<project name="VcMod" default="CreateJar">
+<project name="SpigotPlugin_EcoHeads" default="CreateJar">
   <target name="CreateJar" description="Create Jar file">
         <jar jarfile="./server/plugins/EcoHeads.jar" basedir="./target/classes/" includes="**/*" />
   </target>
