@@ -2,8 +2,6 @@
 
 The SpigotPlugin project is a template for creating a new project for the Spigot server implementation for Minecraft. It can compile out of box, but will do absolutely nothing without modification.
 
-**Do not use the me.sgray namespace! Change to either use either an email account or domain name that YOU own.**
-
 ## Motivation
 
 There's a lot of examples of how to create a pom.xml file for Maven-enabled projects, but very few designed to give a basis for Spigot plugins. The pom.xml in this project contains the most relevant and useful properties to someone creating a new plugin, including the necessary dependency on the Spigot API.
@@ -39,10 +37,6 @@ Feel free to (and please do) clone this project and make adjustments to fit your
 * Thank you to the Bukkit and Spigot communities for providing a better Minecraft server wrapper
 
 ## License
-
-Zlib was chosen as the basis for this project (BukkitPlugin) as it is highly permissive and easy for people to understand. The license has only been modified for this project to reflect authorship and creation year.
-
-Copyright (c) 2014 Shaila Gray
 
 This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
