@@ -52,7 +52,15 @@ public class HeadDBListener implements Listener{
         	Logger.info("EVENT NAME:" + event.getEventName());
         	Logger.info("EVENT ACTION:" + event.getAction());
         	Logger.info("EVENT ITEM META: " + itemMetaString);
-        	if(! itemMetaString.contains("\"text\":\"Page \""))
+        	if( itemMetaString.contains("\"text\":\"Page \""))
+        	{
+        		return;
+        	}
+        	else if( itemMetaString.contains("UNSPECIFIC_META"))
+        	{
+        		return;
+        	}
+        	else
         	{
         		Logger.info("DETECTED HEAD SALE!!!!");
         		double playerBalance = EcoHeadsPlugin.ECONOMY.getBalance(player.getName());

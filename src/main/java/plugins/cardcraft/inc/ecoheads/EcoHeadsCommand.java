@@ -36,25 +36,26 @@ public class EcoHeadsCommand implements CommandExecutor {
         }
         String sub = args[0];
         
-        if (sub.equalsIgnoreCase("search") || sub.equalsIgnoreCase("s")) {
-            if (!sender.hasPermission("ecoheaddb.search")) {
+        if (sub != null) 
+        {
+            if (!sender.hasPermission("ecoheaddb.search")) 
+            {
                 Utils.sendMessage(sender, "&cNo permission!");
                 return true;
             }
-            if (args.length < 2) {
-                Utils.sendMessage(sender, "&c/hdb search <name>");
-                return true;
-            }
-            if (!(sender instanceof Player)) {
+            if (!(sender instanceof Player)) 
+            {
                 Utils.sendMessage(sender, "&cOnly players may open the database.");
                 return true;
             }
             Player player = (Player) sender;
 
             StringBuilder builder = new StringBuilder();
-            for (int i = 1; i < args.length; i++) {
+            for (int i = 0; i < args.length; i++) 
+            {
                 builder.append(args[i]);
-                if (i != args.length - 1) {
+                if (i != args.length - 1) 
+                {
                     builder.append(" ");
                 }
             }
