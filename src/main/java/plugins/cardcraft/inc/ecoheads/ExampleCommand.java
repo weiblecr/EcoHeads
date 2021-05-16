@@ -1,13 +1,13 @@
-package plugins.cardcraft.inc.spigotplugin;
+package plugins.cardcraft.inc.ecoheads;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class ExampleCommand implements CommandExecutor {
-    SpigotPlugin plugin;
+    EcoHeadsPlugin plugin;
 
-    public ExampleCommand(SpigotPlugin plugin) {
+    public ExampleCommand(EcoHeadsPlugin plugin) {
         this.plugin = plugin;
     }
 

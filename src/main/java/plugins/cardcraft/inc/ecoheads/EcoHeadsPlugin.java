@@ -1,8 +1,8 @@
-package plugins.cardcraft.inc.spigotplugin;
+package plugins.cardcraft.inc.ecoheads;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class SpigotPlugin extends JavaPlugin {
+public class EcoHeadsPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         // Don't log disabling, Spigot does that for you automatically!
@@ -13,7 +13,7 @@ public class SpigotPlugin extends JavaPlugin {
         // Don't log enabling, Spigot does that for you automatically!
 
         // Commands enabled with following method must have entries in plugin.yml
-    	getLogger().info("Enabling The SpigotPlugin");
+    	getLogger().info("Enabling The EcoHeads Plugin");
         getCommand("example").setExecutor(new ExampleCommand(this));
     }
 }
