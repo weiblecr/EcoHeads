@@ -35,22 +35,40 @@ public class EcoHeadsCommand implements CommandExecutor {
             return true;
         }
         String sub = args[0];
+        
+        if (sub.equalsIgnoreCase("search") || sub.equalsIgnoreCase("s")) {
+            if (!sender.hasPermission("ecoheaddb.search")) {
+                Utils.sendMessage(sender, "&cNo permission!");
+                return true;
+            }
+            if (args.length < 2) {
+                Utils.sendMessage(sender, "&c/hdb search <name>");
+                return true;
+            }
+            if (!(sender instanceof Player)) {
+                Utils.sendMessage(sender, "&cOnly players may open the database.");
+                return true;
+            }
+            Player player = (Player) sender;
 
-        if (sub.equalsIgnoreCase("info") || sub.equalsIgnoreCase("i")) {
-            Utils.sendMessage(sender, "Running &cHeadDB v" + HeadDB.getInstance().getDescription().getVersion());
-            Utils.sendMessage(sender, "Created by &c" + HeadDB.getInstance().getDescription().getAuthors());
-            Utils.sendMessage(sender, "There are currently &c" + HeadAPI.getHeads().size() + " &7heads in the database.");
+            StringBuilder builder = new StringBuilder();
+            for (int i = 1; i < args.length; i++) {
+                builder.append(args[i]);
+                if (i != args.length - 1) {
+                    builder.append(" ");
+                }
+            }
+            String name = builder.toString();
+            Utils.sendMessage(sender, "Searching for &e" + name);
+            InventoryUtils.openSearchDatabase(player, name);
             return true;
         }
-        
+     
         Utils.sendMessage(sender, " ");
-        Utils.sendMessage(sender, "&c&lHeadDB &c- &5Commands");
+        Utils.sendMessage(sender, "&c&lEcoHeadsDB &c- &5Commands");
         Utils.sendMessage(sender, "&7&oParameters:&c command &9(aliases)&c arguments... &7- Description");
-        Utils.sendMessage(sender, " > &c/hdb &7- Opens the database");
-        Utils.sendMessage(sender, " > &c/hdb info &9(i) &7- Plugin Information");
-        Utils.sendMessage(sender, " > &c/hdb search &9(s) &c<name> &7- Search for heads matching a name");
-        Utils.sendMessage(sender, " > &c/hdb tagsearch &9(ts) &c<tag> &7- Search for heads matching a tag");
-        Utils.sendMessage(sender, " > &c/hdb give &9(g) &c<id> <player> &6[amount] &7- Give player a head");
+        Utils.sendMessage(sender, " > &c/ehdb &7- Opens the database");
+        Utils.sendMessage(sender, " > &c/ehdb search &9(s) &c<name> &7- Search for heads matching a name");
         Utils.sendMessage(sender, " ");
         return true;        
     }

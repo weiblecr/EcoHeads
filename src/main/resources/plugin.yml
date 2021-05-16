@@ -15,5 +15,7 @@ commands:
 permissions:
   ecoheaddb.open:
     default: true
+  ecoheaddb.search:
+    default: true
     
 softdepend: [HeadDB, Vault, Essentials]
