@@ -7,9 +7,13 @@ website: ${url}
 main: ${mainClass}
 
 commands:
-    example:
-        description: An example command
-        permission: spigotplugin.example
-        usage: /<command>
+    ecoheads:
+        usage: /ecoheads.ecoheads
+        description: Economy Based Access to HeadsDB
+        aliases: [eh,ehdb]
 
-permissions: {}
+permissions:
+  ecoheaddb.open:
+    default: true
+    
+softdepend: [HeadDB, Vault, Essentials]

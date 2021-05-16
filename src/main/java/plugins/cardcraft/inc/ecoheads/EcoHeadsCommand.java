@@ -20,7 +20,7 @@ public class EcoHeadsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length == 0) {
-            if (!sender.hasPermission("headdb.open")) {
+            if (!sender.hasPermission("ecoheaddb.open")) {
                 Utils.sendMessage(sender, "&cNo permission!");
                 return true;
             }

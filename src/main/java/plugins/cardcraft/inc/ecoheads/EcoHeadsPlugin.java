@@ -2,6 +2,9 @@ package plugins.cardcraft.inc.ecoheads;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import plugins.cardcraft.inc.ecoheads.listeners.HeadDBListener;
+import plugins.cardcraft.inc.ecoheads.util.Logger;
+
 public class EcoHeadsPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
@@ -10,10 +13,11 @@ public class EcoHeadsPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Don't log enabling, Spigot does that for you automatically!
 
-        // Commands enabled with following method must have entries in plugin.yml
-    	getLogger().info("Enabling The EcoHeads Plugin");
-        getCommand("headdb").setExecutor(new EcoHeadsCommand(this));
+
+    	Logger.debug("Registering listeners...");
+    	new HeadDBListener(this);
+
+        getCommand("ecoheads").setExecutor(new EcoHeadsCommand(this));
     }
 }
